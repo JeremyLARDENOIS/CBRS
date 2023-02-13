@@ -118,8 +118,8 @@ public class App
 
     public static void main( String[] args )
     {
-        // deleteAllData();
-        // importData("/home/jerem/Documents/s9/dbgraph/CBRS/ml-latest-small/movies.csv");
+        deleteAllData();
+        importData("/home/jerem/Documents/s9/dbgraph/CBRS/ml-latest-small/movies.csv");
         importUsers("/home/jerem/Documents/s9/dbgraph/CBRS/ml-latest-small/ratings.csv");
         exportAllData();
     }

@@ -5,6 +5,12 @@ services:
     image: neo4j:latest
     environment:
       NEO4J_AUTH: none
+      NEO4J_apoc_export_file_enabled: true
+      NEO4J_apoc_import_file_enabled: true
+      NEO4J_apoc_import_file_use__neo4j__config: true
+      NEO4JLABS_PLUGINS: '["apoc"]'
     ports:
       - 7474:7474 # http
       - 7687:7687 # bolt
+    volumes:
+      - ./plugins/apoc.jar:/var/lib/neo4j/plugins/apoc.jar
